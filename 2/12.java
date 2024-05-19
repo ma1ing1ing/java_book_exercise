@@ -5,16 +5,20 @@ public class Main{
 
         System.out.println("점수를 입력하세요 : ");
         int score = s.nextInt();
+        char grade;
 
-        if(score>90)
-            System.out.print("A입니다.");
-        else if(score>80)
-            System.out.print("B입니다.");
-        else if(score>70)
-            System.out.print("C입니다.");
-        else if(score >60)
-            System.out.print("조금 더 노력하세요");
+        if(score>=90)
+            grade='A';
+        else if(score>=80)                
+            grade='B';
+        else
+            grade='c';
         
+        if(score<60)
+            System.out.print("조금 더 노력하세요");
+        else
+            System.out.print("학점은 "+grade+"입니다.");
+            
         s.close();
     }
 }
